@@ -66,3 +66,14 @@ nginx -p "$PWD" -c nginx.conf
     wrk -t8 -c790 -d15s http://127.0.0.1:8080/gunicorn/
 
      wrk -t8 -c140 -d15s http://127.0.0.1:8000/
+
+### Задание №3
+
+Запуск Django через gunicorn:
+
+`gunicorn book_catalog.wsgi:application --bind 127.0.0.1:8000 --workers 4`
+
+Запуск nginx:
+
+    nginx -t -p "$PWD" -c nginx.conf
+    nginx -p "$PWD" -c nginx.conf
