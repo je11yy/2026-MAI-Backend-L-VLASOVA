@@ -77,3 +77,8 @@ nginx -p "$PWD" -c nginx.conf
 
     nginx -t -p "$PWD" -c nginx.conf
     nginx -p "$PWD" -c nginx.conf
+
+Проверка:
+
+    curl -X POST http://127.0.0.1:8080/api/favorites/add/
+    curl http://127.0.0.1:8080/api/favorites/add/
